@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rsvp-app
-        image: nkhare/rsvpapp: dev
+        image: qoutland/rsvpapp-webinar4:b54fd9828cd8255d7e3cfdfb8faf02d42875b45e
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
