@@ -2,7 +2,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/python:latest
+      - image: circleci/python:3.6.4
     working_directory: ~/repo
     steps:
       - checkout
@@ -16,8 +16,8 @@ jobs:
             python -m pytest tests/test_rsvpapp.py  
 
   build:
-    machine:
-      image: circleci/python:latest
+    docker:
+      - image: circleci/python:3.6.4
     working_directory: ~/repo
     steps:
       - checkout 
@@ -26,8 +26,8 @@ jobs:
           command: |
             docker build -t $DOCKERHUB_USERNAME/rsvpapp:$CIRCLE_SHA1 .
   push:
-    machine:
-      image: circleci/python:latest
+    docker:
+      - image: circleci/python:3.6.4
     working_directory: ~/repo
     steps:
       - checkout 
