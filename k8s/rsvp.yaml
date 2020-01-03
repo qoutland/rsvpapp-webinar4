@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rsvp-app
-        image: qoutland/rsvpapp-webinar4:b54fd9828cd8255d7e3cfdfb8faf02d42875b45e
+        image: qoutland/rsvpapp-webinar4:56a71df23cdeb91338d12253962d843bcf325917
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
