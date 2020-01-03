@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rsvp-app
-        image: nkhare/rsvpapp: dev
+        image: qoutland/rsvpapp: dev
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
